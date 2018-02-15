@@ -10,7 +10,7 @@ Maven:
 <dependency>
   <groupId>ru.finolog</groupId>
   <artifactId>finolog-client</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    compile 'ru.finolog:finolog-client:0.0.1'
+    compile 'ru.finolog:finolog-client:0.0.2'
 }
 ```
 

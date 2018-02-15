@@ -1,4 +1,4 @@
-package ru.finolog.finologclient.company;
+package ru.finolog.finologclient.contractor;
 
 
 import org.junit.Ignore;
@@ -10,19 +10,19 @@ import java.util.Properties;
 import lombok.SneakyThrows;
 import retrofit2.Response;
 import ru.finolog.finologclient.FinologClientTest;
-import ru.finolog.finologclient.company.entity.Company;
-import ru.finolog.finologclient.company.impl.CompanyClientBuilder;
+import ru.finolog.finologclient.contractor.entity.Contractor;
+import ru.finolog.finologclient.contractor.impl.ContractorClientBuilder;
 
 import static org.junit.Assert.assertNotNull;
 
-public class FinologCompanyClientTest extends FinologClientTest {
+public class FinologContractorClientTest extends FinologClientTest {
 
 
     @SneakyThrows
-    private CompanyClient getCompanyClient() {
+    private ContractorClient getContractorClient() {
         Properties properties = getProperties();
 
-        return new CompanyClientBuilder()
+        return new ContractorClientBuilder()
                 .schema(properties.getProperty("finolog.schema"))
                 .host(properties.getProperty("finolog.host"))
                 .basePath(properties.getProperty("finolog.basePath"))
@@ -35,10 +35,10 @@ public class FinologCompanyClientTest extends FinologClientTest {
     @SneakyThrows
     public void testList() {
 
-        CompanyClient companyClient = getCompanyClient();
-        Response<List<Company>> companyResponse = companyClient.list(12111);
+        ContractorClient contractorClient = getContractorClient();
+        Response<List<Contractor>> contractorResponse = contractorClient.list(12111);
 
-        assertNotNull(companyResponse.body());
+        assertNotNull(contractorResponse.body());
     }
 
 

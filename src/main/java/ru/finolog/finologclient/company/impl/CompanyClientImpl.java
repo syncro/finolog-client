@@ -36,15 +36,15 @@ class CompanyClientImpl implements CompanyClient {
 
     }
 
-    public Response<Company> create(Integer bizId, Company category) throws IOException {
+    public Response<Company> create(Integer bizId, Company company) throws IOException {
 
-        return companyAPI.create(apiToken, bizId, category).execute();
+        return companyAPI.create(apiToken, bizId, company).execute();
 
     }
 
-    public Response<Company> save(Integer bizId, Integer id, Company category) throws IOException {
+    public Response<Company> save(Integer bizId, Integer id, Company company) throws IOException {
 
-        return companyAPI.save(apiToken, bizId, id, category).execute();
+        return companyAPI.save(apiToken, bizId, id, company).execute();
 
     }
 

@@ -15,10 +15,10 @@ public interface CompanyClient {
 
     Response<List<Company>> list(Integer bizId) throws IOException;
 
-    Response<Company> create(Integer bizId, Company category) throws IOException;
+    Response<Company> create(Integer bizId, Company company) throws IOException;
 
-    Response<Company> save(Integer bizId, Integer id, Company category) throws IOException;
+    Response<Company> save(Integer bizId, Integer id, Company company) throws IOException;
 
-    Response delete(Integer id, Integer categoryId) throws IOException;
+    Response delete(Integer id, Integer companyId) throws IOException;
 
 }

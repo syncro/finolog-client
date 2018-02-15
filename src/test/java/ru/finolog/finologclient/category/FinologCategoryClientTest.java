@@ -1,6 +1,7 @@
 package ru.finolog.finologclient.category;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class FinologCategoryClientTest extends FinologClientTest {
     }
 
     @Test
-    //@Ignore
+    @Ignore
     @SneakyThrows
     public void testList() {
 
